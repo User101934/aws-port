@@ -1,0 +1,16 @@
+# Use small nginx image to serve static site
+FROM nginx:stable-alpine
+
+# Remove default nginx html (optional)
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy site files
+COPY index.html /usr/share/nginx/html/index.html
+COPY profile.jpg /usr/share/nginx/html/profile.jpg
+COPY resume.pdf /usr/share/nginx/html/resume.pdf
+
+# Expose port
+EXPOSE 80
+
+# Run nginx in foreground
+CMD ["nginx", "-g", "daemon off;"]

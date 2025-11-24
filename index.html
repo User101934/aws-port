@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SAKTHIRAM V — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio of Sakthiram V — Aspiring DevOps Engineer" />
+  <style>
+    :root{
+      --bg:#071027; --card:#0b1220; --muted:#98a0b3; --accent1:#7c3aed; --accent2:#06b6d4; --glass:rgba(255,255,255,0.04);
+      --radius:16px; --glass-2:rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:linear-gradient(180deg,var(--bg),#04121a);-webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:900;color:white;font-size:22px;box-shadow:0 8px 40px rgba(12,14,20,0.6)}
+    .nav{display:flex;gap:14px;align-items:center}
+    .btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:10px 16px;border-radius:12px;color:white;font-weight:700;text-decoration:none;box-shadow:0 8px 24px rgba(12,14,20,0.6)}
+    .ghost{padding:8px 12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);text-decoration:none}
+
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-top:28px;align-items:center}
+    .card{background:linear-gradient(180deg,var(--card),#07101a);padding:28px;border-radius:var(--radius);box-shadow:0 10px 50px rgba(3,6,20,0.6);backdrop-filter:blur(6px)}
+    h1{margin:0;font-size:34px;letter-spacing:-0.5px}
+    .lead{color:var(--muted);margin-top:10px;line-height:1.6}
+    .cta-row{display:flex;gap:12px;margin-top:18px}
+
+    .profile{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+    .avatar{width:320px;height:320px;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(2,6,23,0.6);background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(6,182,212,0.06));display:flex;align-items:center;justify-content:center}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    section{margin-top:28px}
+    .grid-2{display:grid;grid-template-columns:1fr 380px;gap:24px}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{background:var(--glass);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:700;font-size:13px}
+
+    .projects{display:grid;grid-template-columns:1fr;gap:16px}
+    .proj-hero{display:grid;grid-template-columns:1fr 240px;gap:16px;align-items:center}
+    .proj{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid var(--glass-2);transition:transform .22s ease,box-shadow .22s ease}
+    .proj:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(2,6,23,0.6)}
+    .proj h3{margin:6px 0 6px}
+    .proj p{color:var(--muted);margin:0}
+    .proj .meta{margin-top:6px}
+    .tech-list{display:flex;flex-direction:column;gap:8px}
+    .tech{padding:8px;border-radius:10px;background:rgba(255,255,255,0.03);font-size:13px;text-align:center}
+    .proj-links{display:flex;gap:8px;margin-top:10px}
+
+    .timeline{position:relative;padding-left:18px}
+    .timeline:before{content:'';position:absolute;left:6px;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--accent1),var(--accent2));border-radius:6px}
+    .event{position:relative;margin-bottom:18px;padding-left:18px}
+    .dot{position:absolute;left:-6px;top:4px;width:14px;height:14px;border-radius:50%;background:linear-gradient(90deg,var(--accent1),var(--accent2));box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .meta{color:var(--muted);font-size:14px}
+
+    .contact-card{display:grid;gap:12px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:12px;border-radius:10px;color:inherit}
+    .footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media(max-width:980px){.hero{grid-template-columns:1fr;}.grid-2{grid-template-columns:1fr}.projects{grid-template-columns:1fr}.avatar{width:220px;height:220px}.card{padding:18px}.proj-hero{grid-template-columns:1fr}}
+    .float{animation:floaty 6s ease-in-out infinite}
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+
+    /* Small utility */
+    .muted{color:var(--muted)}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SV</div>
+        <div>
+          <div style="font-weight:900;font-size:16px">SAKTHIRAM V</div>
+          <div style="font-size:13px;color:var(--muted)">Aspiring DevOps Engineer</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="ghost" href="#about">About</a>
+        <a class="ghost" href="#projects">Projects</a>
+        <a class="ghost" href="#experience">Experience</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="card">
+        <h1>Hello — I'm <span style="background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;color:transparent;">SAKTHIRAM V</span></h1>
+        <div class="lead">Aspiring DevOps Engineer skilled with Linux, AWS, Docker and automation. I build reliable deployments, automate workflows, and love learning cloud-native tooling.</div>
+        <div class="cta-row">
+          <a class="btn" href="#projects">See my work</a>
+          <a class="ghost" href="#contact">Get in touch</a>
+        </div>
+
+        <section id="about" style="margin-top:22px">
+          <h3 style="margin:0">Career Objective</h3>
+          <p class="lead muted" style="margin-top:8px">Aspiring DevOps Engineer with foundational knowledge in Linux, cloud platforms, and automation tools like Git and Docker. Eager to apply skills in real-world environments and grow within a dynamic tech team.</p>
+
+          <div style="margin-top:14px">
+            <strong style="color:var(--muted)">Contact</strong>
+            <div style="margin-top:8px;color:var(--muted);font-size:14px">
+              Tiruppur – 641605 • +91 9597453121 • sakthiramjvm@gmail.com
+              <br/>
+              <a href="https://linkedin.com/in/sakthi-ram-vsr-271393900" target="_blank" class="ghost" style="margin-top:8px;display:inline-block">LinkedIn</a>
+              <a href="https://github.com/User101934" target="_blank" class="ghost" style="margin-top:8px;display:inline-block;margin-left:8px">GitHub</a>
+            </div>
+          </div>
+
+          <div style="margin-top:14px">
+            <strong style="color:var(--muted)">Education</strong>
+            <div style="margin-top:8px;color:var(--muted);font-size:14px">
+              <div><strong>M.Sc. Software Systems</strong>, Sri Krishna Arts and Science College (2021 – 2026) — CGPA: 8.0</div>
+              <div style="margin-top:6px"><strong>HSC (+2)</strong>, Vivekanda Vidyalaya Matric Higher Secondary School (2019 – 2021)</div>
+              <div style="margin-top:6px"><strong>SSLC</strong>, Vivekanda Vidyalaya Matric Higher Secondary School (2018 – 2019)</div>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-top:18px">
+          <h3 style="margin:0">Highlights</h3>
+          <ul style="margin-top:10px;color:var(--muted);line-height:1.6">
+            <li>Built and deployed containerized applications using Docker and AWS EC2.</li>
+            <li>Implemented serverless image detection workflows using AWS Rekognition, Lambda, and API Gateway.</li>
+            <li>Developed real-time driver drowsiness detection using OpenCV and MediaPipe.</li>
+          </ul>
+        </section>
+      </div>
+
+      <aside class="profile float">
+        <div class="avatar card">
+          <!-- Using the photo you uploaded. The path will be served from the Docker bundle when added. -->
+          <img src="profile.jpg" alt="SAKTHIRAM V" />
+        </div>
+      </aside>
+    </div>
+
+    <div class="grid-2">
+      <main>
+        <section id="projects" class="card">
+          <h2 style="margin-top:0">Featured Projects — deeper tech highlights</h2>
+
+          <!-- Project 1 -->
+          <div class="proj proj-hero" style="margin-top:12px">
+            <div>
+              <div class="proj">
+                <h3>Driver Drowsiness Detection System</h3>
+                <div class="meta small">Python • OpenCV • MediaPipe • Real-time</div>
+                <p style="margin-top:10px">An edge application that analyzes webcam frames in real-time to detect prolonged eye closure and yawning. Triggers audible alerts and logs events for review. Optimized for low CPU overhead and robust to varying lighting conditions.</p>
+                <div class="proj-links">
+                  <a class="ghost" href="https://github.com/User101934" target="_blank">Code on GitHub</a>
+                  <a class="btn" href="#contact">Request Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="tech-list">
+              <div class="tech"><strong>Key contributions</strong><br/>Face landmark detection, blink/yawn heuristics, audio alerts</div>
+              <div class="tech"><strong>Impact</strong><br/>Real-time alerts — potential to reduce fatigue incidents</div>
+              <div class="tech"><strong>Notes</strong><br/>Works offline, lightweight model pipeline</div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="proj proj-hero" style="margin-top:12px">
+            <div>
+              <div class="proj">
+                <h3>Static Website Hosting on AWS</h3>
+                <div class="meta small">AWS S3 • EC2 • Nginx • IAM</div>
+                <p style="margin-top:10px">Designed and deployed secure static hosting using S3 and EC2. Configured bucket policies, CORS, and Nginx for optimal caching and HTTPS-ready setup. Automated deployment steps for repeatable releases.</p>
+                <div class="proj-links">
+                  <a class="ghost" href="#">Deployment notes</a>
+                  <a class="btn" href="#contact">Get Setup Script</a>
+                </div>
+              </div>
+            </div>
+            <div class="tech-list">
+              <div class="tech"><strong>Key contributions</strong><br/>Bucket policy hardening, Nginx reverse proxy</div>
+              <div class="tech"><strong>Impact</strong><br/>Faster content delivery and secure public access</div>
+              <div class="tech"><strong>Notes</strong><br/>Can integrate with CloudFront for CDN</div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="proj proj-hero" style="margin-top:12px">
+            <div>
+              <div class="proj">
+                <h3>Portfolio Deployment using GitHub, Docker & AWS EC2</h3>
+                <div class="meta small">Docker • GitHub • EC2 • CI/CD</div>
+                <p style="margin-top:10px">Containerized the portfolio website, pushed to GitHub, and deployed on an EC2 instance. Implemented a systemd/docker service to ensure the container restarts on boot and created a simple build script for quick redeploys.</p>
+                <div class="proj-links">
+                  <a class="ghost" href="https://github.com/User101934" target="_blank">View repo</a>
+                  <a class="btn" href="#contact">Deployment Script</a>
+                </div>
+              </div>
+            </div>
+            <div class="tech-list">
+              <div class="tech"><strong>Key contributions</strong><br/>Dockerfile authoring, startup scripts</div>
+              <div class="tech"><strong>Impact</strong><br/>Reliable public hosting with auto-restart</div>
+              <div class="tech"><strong>Notes</strong><br/>Ready for Github Actions CI</div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="proj proj-hero" style="margin-top:12px">
+            <div>
+              <div class="proj">
+                <h3>AWS Object Detection System</h3>
+                <div class="meta small">AWS Rekognition • Lambda • API Gateway • S3</div>
+                <p style="margin-top:10px">Serverless workflow for image object detection. Images uploaded to S3 trigger Lambda which uses Rekognition to detect objects; results served via API Gateway and displayed in a simple web UI.</p>
+                <div class="proj-links">
+                  <a class="ghost" href="#">Architecture diagram</a>
+                  <a class="btn" href="#contact">Request architecture</a>
+                </div>
+              </div>
+            </div>
+            <div class="tech-list">
+              <div class="tech"><strong>Key contributions</strong><br/>Lambda orchestration, IAM role setup</div>
+              <div class="tech"><strong>Impact</strong><br/>Cost-effective serverless detection</div>
+              <div class="tech"><strong>Notes</strong><br/>Can be extended with SNS notifications</div>
+            </div>
+          </div>
+
+        </section>
+
+        <section id="experience" class="card" style="margin-top:18px">
+          <h2 style="margin-top:0">Experience</h2>
+          <div class="timeline" style="margin-top:12px">
+            <div class="event">
+              <div class="dot"></div>
+              <div style="font-weight:800">Intern — Cognifyz Technologies, Nagpur</div>
+              <div class="meta">Mar 2025 — Apr 2025</div>
+              <div style="color:var(--muted);margin-top:8px">Contributed to cloud setup tasks, assisted in containerization and basic automation workflows. Gained hands-on experience with AWS services and Linux administration.</div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <h2 style="margin-top:0">Certifications</h2>
+          <div style="margin-top:10px;color:var(--muted)">
+            <div><strong>AWS Certified Cloud Practitioner</strong> — GeeksforGeeks</div>
+            <div style="margin-top:6px"><strong>DevOps Beginner to Advanced</strong> — Udemy</div>
+            <div style="margin-top:6px"><strong>Python Full Course</strong> — GeeksforGeeks</div>
+            <div style="margin-top:6px"><strong>Java & Python</strong> — IIT Spoken Tutorial</div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside>
+        <div class="card contact-card">
+          <h3 style="margin-top:0">Quick Info</h3>
+          <div class="meta">Location: Tiruppur – 641605</div>
+          <div class="meta">Phone: +91 9597453121</div>
+          <div class="meta">Email: sakthiramjvm@gmail.com</div>
+          <div class="meta">LinkedIn: sakthi-ram-vsr-271393900</div>
+          <div class="meta">GitHub: User101934</div>
+
+          <div style="margin-top:12px">
+            <strong class="muted">Key Technical Skills</strong>
+            <div style="margin-top:8px;color:var(--muted)">
+              <div><strong>Cloud:</strong> AWS (EC2, S3, IAM, VPC, Subnet, CloudWatch, Lambda, Load Balancer, Auto Scaling)</div>
+              <div style="margin-top:6px"><strong>Programming & Scripting:</strong> Python (pandas, NumPy, TensorFlow, Keras), Bash</div>
+              <div style="margin-top:6px"><strong>Version Control & Container:</strong> Git, GitHub, Docker</div>
+              <div style="margin-top:6px"><strong>Databases:</strong> SQL (SELECT, JOIN, GROUP BY), CSV handling</div>
+              <div style="margin-top:6px"><strong>OS & Tools:</strong> Linux CLI, VS Code</div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;text-align:center">
+            <a class="btn" href="resume.pdf" download>Download Resume</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h3 style="margin-top:0">Achievements & Interests</h3>
+          <div style="margin-top:8px;color:var(--muted)">
+            <div><strong>Achievements:</strong> 3rd Prize – Logo Designing in TechnoFest; Presented 'Stress Analysis using ML' at Sri Ramakrishna Arts and Science College</div>
+            <div style="margin-top:8px"><strong>Languages:</strong> Tamil, English, Hindi</div>
+            <div style="margin-top:8px"><strong>Hobbies:</strong> Music, Playing</div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+
+    <div class="footer">Made with ❤️ • Updated Nov 2025 • Sakthiram V</div>
+  </div>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    })
+  </script>
+
+  <!-- Dockerfile (save as Dockerfile alongside index.html and resume.pdf) -->
+  <!--
+  FROM nginx:stable-alpine
+  COPY index.html /usr/share/nginx/html/index.html
+  COPY resume.pdf /usr/share/nginx/html/resume.pdf
+  COPY profile.jpg /usr/share/nginx/html/profile.jpg
+  EXPOSE 80
+  CMD ["nginx","-g","daemon off;"]
+  -->
+
+</body>
+</html>

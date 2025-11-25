@@ -123,6 +123,7 @@
             <li>Built and deployed containerized applications using Docker and AWS EC2.</li>
             <li>Implemented serverless image detection workflows using AWS Rekognition, Lambda, and API Gateway.</li>
             <li>Developed real-time driver drowsiness detection using OpenCV and MediaPipe.</li>
+            <li>Worked on real-time stress analysis and image compression systems leveraging AWS for scalability and cost-efficiency.</li>
           </ul>
         </section>
       </div>
@@ -140,17 +141,51 @@
         <section id="projects" class="card">
           <h2 style="margin-top:0">Featured Projects — deeper tech highlights</h2>
 
-          <!-- Project 1 -->
+          <!-- NEW Project A: Stress Analysis in Real-Time -->
+          <div class="proj proj-hero" style="margin-top:12px">
+            <div>
+              <div class="proj">
+                <h3>Stress Analysis in Real-Time (Edge + Cloud)</h3>
+                <div class="meta small">Python • OpenCV • TensorFlow • AWS (S3, Lambda, SageMaker)</div>
+                <p style="margin-top:10px">A real-time system that analyses webcam or recorded video to estimate stress indicators (facial micro-expressions, heart rate variability from face, and posture cues). The solution processes frames locally for low-latency detection and pushes aggregated metrics to AWS for storage, model retraining, and dashboarding.</p>
+                <div class="proj-links">
+  <a class="btn" href="https://live.d343je4l0l1e50.amplifyapp.com" target="_blank">View Project</a>
+</div>
+              </div>
+            </div>
+            <div class="tech-list">
+              <div class="tech"><strong>Key contributions</strong><br/>Real-time landmark extraction, lightweight on-edge inference, AWS-based data pipeline</div>
+              <div class="tech"><strong>Impact</strong><br/>Enables proactive stress detection and reporting; useful for wellness apps and workplace monitoring (privacy-first configurable options)</div>
+              <div class="tech"><strong>Notes</strong><br/>Local inference for privacy, periodic uploads to S3; fine-tune models on SageMaker; Lambda functions for event-driven processing</div>
+            </div>
+          </div>
+
+          <!-- NEW Project B: Image Compression Website (AWS) -->
+          <div class="proj proj-hero" style="margin-top:12px">
+            <div>
+              <div class="proj">
+                <h3>Image Compression Website</h3>
+<div class="meta small">Flask • PIL / Pillow • AWS S3 • AWS Lambda • API Gateway</div>
+<p style="margin-top:10px">A user-friendly web app that accepts images, compresses them with configurable quality/format options. (Currently offline — built using AWS EC2)</p>
+<div class="proj-links">
+  <a class="btn" href="#" target="_blank">Server Inactive</a>
+</div>
+              </div>
+            </div>
+            <div class="tech-list">
+              <div class="tech"><strong>Key contributions</strong><br/>Upload pipeline, serverless compression workers, secure S3 access patterns</div>
+              <div class="tech"><strong>Impact</strong><br/>Reduces image sizes by 60–90% improving page load times and lowering storage & bandwidth costs</div>
+              <div class="tech"><strong>Notes</strong><br/>Supports batch compression, format conversion (PNG→WebP), and CDN-ready S3 lifecycle rules</div>
+            </div>
+          </div>
+
+          <!-- Existing Project 1 -->
           <div class="proj proj-hero" style="margin-top:12px">
             <div>
               <div class="proj">
                 <h3>Driver Drowsiness Detection System</h3>
-                <div class="meta small">Python • OpenCV • MediaPipe • Real-time</div>
-                <p style="margin-top:10px">An edge application that analyzes webcam frames in real-time to detect prolonged eye closure and yawning. Triggers audible alerts and logs events for review. Optimized for low CPU overhead and robust to varying lighting conditions.</p>
-                <div class="proj-links">
-                  <a class="ghost" href="https://github.com/User101934" target="_blank">Code on GitHub</a>
-                  <a class="btn" href="#contact">Request Demo</a>
-                </div>
+<div class="meta small">Python • OpenCV • MediaPipe • Real-time</div>
+<p style="margin-top:10px">An edge application that analyzes webcam frames in real-time to detect prolonged eye closure and yawning.</p>
               </div>
             </div>
             <div class="tech-list">
@@ -160,17 +195,13 @@
             </div>
           </div>
 
-          <!-- Project 2 -->
+          <!-- Existing Project 2 -->
           <div class="proj proj-hero" style="margin-top:12px">
             <div>
               <div class="proj">
                 <h3>Static Website Hosting on AWS</h3>
-                <div class="meta small">AWS S3 • EC2 • Nginx • IAM</div>
-                <p style="margin-top:10px">Designed and deployed secure static hosting using S3 and EC2. Configured bucket policies, CORS, and Nginx for optimal caching and HTTPS-ready setup. Automated deployment steps for repeatable releases.</p>
-                <div class="proj-links">
-                  <a class="ghost" href="#">Deployment notes</a>
-                  <a class="btn" href="#contact">Get Setup Script</a>
-                </div>
+<div class="meta small">AWS S3 • EC2 • Nginx • IAM</div>
+<p style="margin-top:10px">Designed and deployed secure static hosting using S3 and EC2 with optimized caching and access configuration.</p>
               </div>
             </div>
             <div class="tech-list">
@@ -180,17 +211,13 @@
             </div>
           </div>
 
-          <!-- Project 3 -->
+          <!-- Existing Project 3 -->
           <div class="proj proj-hero" style="margin-top:12px">
             <div>
               <div class="proj">
                 <h3>Portfolio Deployment using GitHub, Docker & AWS EC2</h3>
-                <div class="meta small">Docker • GitHub • EC2 • CI/CD</div>
-                <p style="margin-top:10px">Containerized the portfolio website, pushed to GitHub, and deployed on an EC2 instance. Implemented a systemd/docker service to ensure the container restarts on boot and created a simple build script for quick redeploys.</p>
-                <div class="proj-links">
-                  <a class="ghost" href="https://github.com/User101934" target="_blank">View repo</a>
-                  <a class="btn" href="#contact">Deployment Script</a>
-                </div>
+<div class="meta small">Docker • GitHub • EC2 • CI/CD</div>
+<p style="margin-top:10px">Containerized and deployed portfolio website on AWS EC2 with automated restart and simplified deployment workflow.</p>
               </div>
             </div>
             <div class="tech-list">
@@ -200,17 +227,16 @@
             </div>
           </div>
 
-          <!-- Project 4 -->
+          <!-- Existing Project 4 -->
           <div class="proj proj-hero" style="margin-top:12px">
             <div>
               <div class="proj">
                 <h3>AWS Object Detection System</h3>
-                <div class="meta small">AWS Rekognition • Lambda • API Gateway • S3</div>
-                <p style="margin-top:10px">Serverless workflow for image object detection. Images uploaded to S3 trigger Lambda which uses Rekognition to detect objects; results served via API Gateway and displayed in a simple web UI.</p>
-                <div class="proj-links">
-                  <a class="ghost" href="#">Architecture diagram</a>
-                  <a class="btn" href="#contact">Request architecture</a>
-                </div>
+<div class="meta small">AWS Rekognition • Lambda • API Gateway • S3</div>
+<p style="margin-top:10px">Serverless workflow for image object detection.</p>
+<div class="proj-links">
+  <a class="btn" href="https://obdec121.s3.us-east-1.amazonaws.com/index.html" target="_blank">View Project</a>
+</div>
               </div>
             </div>
             <div class="tech-list">
